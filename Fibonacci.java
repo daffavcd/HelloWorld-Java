@@ -9,19 +9,22 @@
  *
  * @author Unknown
  */
-public class penjumlahan {
+public class Fibonacci {
 
-    static int faktorialPenjumlahan(int i) {
-
-        if (i == 0 || i == 1) {
+    public static Integer fibonacci(int n) {
+        if (n == 0) {
+            return 0;
+        }
+        if (n == 1) {
             return 1;
         }
-
-        return i + faktorialPenjumlahan(i - 1);
+        return fibonacci(n - 1) + fibonacci(n - 2);
     }
 
     public static void main(String[] args) {
-        // TODO Auto-generated method stub
-        System.out.print(faktorialPenjumlahan(8));
+        for (int i = 1; i <= 12; i++) {
+            int hasil = fibonacci(i);
+            System.out.print(hasil + " ");
+        }
     }
 }

@@ -9,21 +9,19 @@
  *
  * @author Unknown
  */
-public class fpbeuclid {
+public class Penjumlahan {
 
-    static int FPB(int a, int b) {
-        int r = 0;
-        while (b != 0) {
-            r = a % b;
-            a = b;
-            b = r;
+    static int faktorialPenjumlahan(int i) {
+
+        if (i == 0 || i == 1) {
+            return 1;
         }
-        return a;
+
+        return i + faktorialPenjumlahan(i - 1);
     }
 
     public static void main(String[] args) {
-        int a = 45;
-        int b = 20;
-        System.out.println("FPB %d dan %d : %d " + a + " " + b + " " + FPB(a, b));
+        // TODO Auto-generated method stub
+        System.out.print(faktorialPenjumlahan(8));
     }
 }

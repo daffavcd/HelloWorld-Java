@@ -9,7 +9,7 @@
  *
  * @author Unknown
  */
-public class cekprima {
+public class Cekprima {
 
     private static int ambilNilaiRekursif(int bil, int num) {
         if (num == 1) {

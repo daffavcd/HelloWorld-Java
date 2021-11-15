@@ -9,17 +9,21 @@
  *
  * @author Unknown
  */
-public class deretdescending {
+public class Fpbeuclid {
 
-    static void deret(int i) {
-        if (i >= 0) {
-            System.out.print(i + " ");
-            deret(--i);
+    static int FPB(int a, int b) {
+        int r = 0;
+        while (b != 0) {
+            r = a % b;
+            a = b;
+            b = r;
         }
+        return a;
     }
 
     public static void main(String[] args) {
-        int i = 10;
-        deret(i);
+        int a = 45;
+        int b = 20;
+        System.out.println("FPB %d dan %d : %d " + a + " " + b + " " + FPB(a, b));
     }
 }
